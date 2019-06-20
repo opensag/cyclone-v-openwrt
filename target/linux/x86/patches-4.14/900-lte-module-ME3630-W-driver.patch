@@ -1,0 +1,18 @@
+--- a/drivers/usb/serial/option.c	2018-08-16 00:13:02.000000000 +0800
++++ b/drivers/usb/serial/option.c	2019-06-20 15:18:19.954166104 +0800
+@@ -308,6 +308,7 @@
+ #define ZTE_PRODUCT_ME3620_MBIM			0x0426
+ #define ZTE_PRODUCT_ME3620_X			0x1432
+ #define ZTE_PRODUCT_ME3620_L			0x1433
++#define ZTE_PRODUCT_ME3630_W                    0x1476        /* NEXSEC add ME3630-W PID */
+ #define ZTE_PRODUCT_AC2726			0xfff1
+ #define ZTE_PRODUCT_MG880			0xfffd
+ #define ZTE_PRODUCT_CDMA_TECH			0xfffe
+@@ -1733,6 +1734,7 @@
+ 	 .driver_info = RSVD(3) | RSVD(4) | RSVD(5) },
+ 	{ USB_DEVICE(ZTE_VENDOR_ID, ZTE_PRODUCT_ZM8620_X),
+ 	 .driver_info = RSVD(3) | RSVD(4) | RSVD(5) },
++	{ USB_DEVICE(ZTE_VENDOR_ID, ZTE_PRODUCT_ME3630_W) },   /* NEXSEC add for ME3630-W */
+ 	{ USB_VENDOR_AND_INTERFACE_INFO(ZTE_VENDOR_ID, 0xff, 0x02, 0x01) },
+ 	{ USB_VENDOR_AND_INTERFACE_INFO(ZTE_VENDOR_ID, 0xff, 0x02, 0x05) },
+ 	{ USB_VENDOR_AND_INTERFACE_INFO(ZTE_VENDOR_ID, 0xff, 0x86, 0x10) },
